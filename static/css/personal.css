@@ -1,0 +1,133 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+.page-wrapper {
+  display: flex;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.side-column {
+  background-color: #E30613;
+  width: 15%;
+  min-width: 80px;
+}
+
+.main-content {
+  background-color: #f8f9fa;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  width: 100%;
+  background-color: white;
+  padding: 1rem 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* ADD THIS LINE */
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+  height: 90px;
+  width: auto;
+}
+
+.products-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+h1 {
+  color: #E30613;
+}
+
+.products-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.product-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 250px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.product-card strong {
+  color: #E30613; /* Red labels */
+}
+
+.product-card h2 {
+  color: #E30613; /* Red product name */
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.deselect-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #E30613;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.deselect-button:hover {
+  background-color: #c00411;
+}
+
+.back-dashboard {
+  margin-top: 2rem;
+}
+
+.back-dashboard a {
+  text-decoration: none;
+  color: #E30613;
+  font-weight: bold;
+}
+
+.back-dashboard a:hover {
+  text-decoration: underline;
+}
+
+.brand-title {
+  margin-top: 10px;
+  font-size: 2.5rem; /* was 1.5rem, now bigger */
+  color: #E30613;
+  font-weight: bold;
+}
+
+.logo {
+  height: 60px; /* smaller than before (was 90px) */
+  width: auto;
+}

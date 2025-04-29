@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="/static/css/dashboard.css">
+</head>
+<body>
+
+<div class="page-wrapper">
+  <div class="side-column"></div>
+
+  <div class="main-content">
+    <header class="header">
+      <img src="/static/images/Continente-e1729550112429.png" alt="Continente Logo" class="logo">
+      <h1 class="brand-title">NutriTrack®</h1>
+    </header>
+
+    <div class="dashboard-container">
+      <h1>Welcome, {{ username }}!</h1>
+
+      <div class="buttons">
+        <a href="/products" class="dashboard-button">Products</a>
+        <a href="/personal" class="dashboard-button">Personal Page</a>
+      </div>
+
+      <div class="logout">
+        <a href="/logout" class="logout-link">Logout</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="side-column"></div>
+</div>
+
+</body>
+</html>

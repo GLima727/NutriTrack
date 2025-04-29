@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Products</title>
+  <link rel="stylesheet" href="/static/css/products.css">
+</head>
+<body>
+
+<div class="page-wrapper">
+  <div class="side-column"></div>
+
+  <div class="main-content">
+    <header class="header">
+      <img src="/static/images/Continente-e1729550112429.png" alt="Continente Logo" class="logo">
+      <h1 class="brand-title">NutriTrack®</h1>
+    </header>
+
+    <div class="products-container">
+      <h1>Available Products</h1>
+
+      <div class="products-grid">
+        {% for product in products %}
+          <div class="product-card">
+            <img src="/static/images/{{ product[6] }}" alt="{{ product[1] }}" class="product-image">
+            <h2>{{ product[1] }}</h2>
+            <p>
+              <strong>Preço:</strong>
+              <span class="old-price">€{{ "%.2f"|format(product[4]) }}</span>
+              <span class="discounted-price">€{{ "%.2f"|format(product[5]) }}</span>
+            </p>
+            <p><strong>Quantity:</strong> {{ product[2] }}</p>
+            <p><strong>Expires:</strong> {{ product[3] }}</p>
+            <p><strong>Supplier:</strong> {{ product[8] }}</p>
+            <p><strong>Location:</strong> {{ product[7] }}</p>
+            
+            <form method="POST" action="/select_product">
+              <input type="hidden" name="product_id" value="{{ product[0] }}">
+              <button type="submit" class="select-button">Select</button>
+            </form>
+          </div>
+        {% else %}
+          <p>No products available right now.</p>
+        {% endfor %}
+      </div>
+
+      <div class="back-dashboard">
+        <a href="/dashboard">Back to Dashboard</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="side-column"></div>
+</div>
+
+</body>
+</html>

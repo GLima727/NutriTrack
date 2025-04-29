@@ -1,0 +1,138 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa; /* light grey instead of pure white */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  width: 100%;
+  background-color: white;
+  padding: 1rem 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* ADD THIS LINE */
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
+.logo {
+  height: 120px;
+  width: auto;
+}
+
+
+.container {
+  background: white;
+  padding: 2rem;
+  margin-top: 5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 300px;
+  text-align: center;
+}
+
+
+h2 {
+  color: #E30613;
+  margin-bottom: 1.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input, select {
+  margin-top: 10px;
+  padding: 0.7rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 0.7rem;
+  background-color: #E30613;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #c00411;
+}
+
+.toggle {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: #007BFF;
+}
+
+.toggle:hover {
+  text-decoration: underline;
+}
+
+.flashes {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.flashes li {
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.flashes li.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.flashes li.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.page-wrapper {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.side-column {
+  background-color: #E30613; /* Continente Red */
+  width: 15%;
+  min-width: 80px; /* ensures it's visible even on small screens */
+}
+
+.main-content {
+  background-color: #f8f9fa; /* Light grey or white */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.brand-title {
+  margin-top: 10px;
+  font-size: 2.5rem; /* was 1.5rem, now bigger */
+  color: #E30613;
+  font-weight: bold;
+}
+
+.logo {
+  height: 60px; /* smaller than before (was 90px) */
+  width: auto;
+}

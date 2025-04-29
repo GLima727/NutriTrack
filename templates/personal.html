@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Personal Page</title>
+  <link rel="stylesheet" href="/static/css/personal.css">
+</head>
+<body>
+
+<div class="page-wrapper">
+  <div class="side-column"></div>
+
+  <div class="main-content">
+    <header class="header">
+      <img src="/static/images/Continente-e1729550112429.png" alt="Continente Logo" class="logo">
+      <h1 class="brand-title">NutriTrack®</h1>
+    </header>
+
+    <div class="products-container">
+      <h1>{{ username }}'s Selected Products</h1>
+
+      <div class="products-grid">
+        {% for product in products %}
+          <div class="product-card">
+            <img src="/static/images/{{ product[5] }}" alt="{{ product[1] }}" class="product-image">
+            <h2>{{ product[1] }}</h2>
+            <p><strong>Price:</strong> ${{ "%.2f"|format(product[4]) }}</p>
+            <p><strong>Quantity:</strong> {{ product[2] }}</p>
+            <p><strong>Expires:</strong> {{ product[3] }}</p>
+            <p><strong>Supplier:</strong> {{ product[7] }}</p>
+            <p><strong>Location:</strong> {{ product[6] }}</p>
+            <form method="POST" action="/deselect_product">
+              <input type="hidden" name="product_id" value="{{ product[0] }}">
+              <button type="submit" class="deselect-button">Deselect</button>
+            </form>
+          </div>
+        {% else %}
+          <p>No products selected yet.</p>
+        {% endfor %}
+      </div>
+
+      <div class="back-dashboard">
+        <a href="/dashboard">Back to Dashboard</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="side-column"></div>
+</div>
+
+</body>
+</html>
