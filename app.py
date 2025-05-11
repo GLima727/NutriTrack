@@ -143,8 +143,11 @@ def products():
     
     products = c.fetchall()
     conn.close()
+    if user_type == 'consumer':
+        return render_template('products.html', products=products, username=session['username'], user_type=user_type)
+    else:
+        return render_template('products_org.html', products=products, username=session['username'], user_type=user_type)
 
-    return render_template('products.html', products=products, username=session['username'], user_type=user_type)
 
 @app.route('/select_product', methods=['POST'])
 def select_product():

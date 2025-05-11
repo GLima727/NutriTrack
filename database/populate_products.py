@@ -19,12 +19,12 @@ def populate_products():
         ("Maçãs Golden", 6, "2025-05-20", 2.99, 0.90, "macas.jpg", "Frutas Continente", "Continente Cascais", "consumer"),
 
         # Produtos para organizações
-        ("Saco de Batatas 20kg", 10, "2025-10-15", 16.50, 4.95, "sacobatatas.jpg", "Agrícola Nacional", "Continente Sintra", "organization"),
-        ("Caixa de Águas 24x0.5L", 8, "2025-07-01", 4.49, 1.35, "agua.jpg", "Águas Luso", "Continente Alfragide", "organization"),
-        ("Palete de Arroz Agulha 30kg", 5, "2026-01-01", 190.00, 57.00, "arroz.jpg", "Orivárzea", "Continente Odivelas", "organization"),
-        ("Detergente Limpeza Ativa", 12, "2027-03-12", 39.90, 11.97, "detergente.jpg", "Continente Limpeza", "Continente Seixal", "organization"),
-        ("Palete de Papel Higiénico", 6, "2027-06-01", 220.00, 66.00, "papel.jpg", "Renova", "Continente Almada", "organization"),
-        ("Saco de Cebolas 25kg", 7, "2025-09-15", 14.90, 4.47, "cebolas.jpg", "Hortícolas do Oeste", "Continente Torres Vedras", "organization"),
+        ("Saco de Batatas 20kg", 10, "2025-10-15", 0.00, 0.00, "sacobatatas.jpg", "Agrícola Nacional", "Continente Sintra", "organization"),
+        ("Caixa de Águas 24x0.5L", 8, "2025-07-01", 0.00, 0.00, "agua.jpg", "Águas Luso", "Continente Alfragide", "organization"),
+        ("Palete de Arroz Agulha 30kg", 5, "2026-01-01", 0.00, 0.00, "arroz.jpg", "Orivárzea", "Continente Odivelas", "organization"),
+        ("Detergente Limpeza Ativa", 12, "2027-03-12", 0.00, 0.00, "detergente.jpg", "Continente Limpeza", "Continente Seixal", "organization"),
+        ("Palete de Papel Higiénico", 6, "2027-06-01", 0.00, 0.00, "papel.jpg", "Renova", "Continente Almada", "organization"),
+        ("Saco de Cebolas 25kg", 7, "2025-09-15", 0.00, 0.00, "cebolas.jpg", "Hortícolas do Oeste", "Continente Torres Vedras", "organization"),
     ]
     c.executemany('''
         INSERT INTO products (name, quantity, expiration_date, price, discounted_price, image, supplier, location, target_user_type)
